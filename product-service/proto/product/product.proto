@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package product;
+
+service ProductService {
+    rpc CreateOrUpdate(ProductInput) returns (SuccessOutput) {}
+}
+
+message ProductInput {
+    string sku = 1;
+    string name = 2;
+    int32 ListPrice = 3;
+    int32 Price = 4;
+    int32 PriceWithCC = 5;
+    string link = 6;
+    repeated string images = 7;
+    bool hasStock = 8;
+    string category = 9;
+    int32 storeId = 10;
+}
+
+message SuccessOutput {
+    bool success = 1;
+    string message = 2;
+}

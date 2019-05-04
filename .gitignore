@@ -1,0 +1,8 @@
+**/*
+!.gitignore
+!**/*.go
+!**/*.proto
+!**/Makefile
+!**/
+!**/*.tf
+!**/*.yml
